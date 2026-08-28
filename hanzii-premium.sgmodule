@@ -1,0 +1,9 @@
+#!name=Hanzii Premium
+#!desc=Fake Premium + AI Hanzii - mo khoa Premium, AI, tat ads (via MITM)
+
+[MITM]
+hostname = api.hanzii.net, api2.hanzii.net, chat-api.hanzii.net, persona.hanzii.net, data.hanzii.net
+
+[Script]
+hanzii-premium = type=http-response,pattern=^https:\/\/(api|api2|chat-api|persona)\.hanzii\.net,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/cuongta-dhcntt/shadowrocket-modules/HASH/hanzii_premium.js
+hanzii-config = type=http-response,pattern=^https:\/\/data\.hanzii\.net\/data\/config\.json,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/cuongta-dhcntt/shadowrocket-modules/HASH/hanzii_premium.js

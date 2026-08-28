@@ -1,9 +1,0 @@
-#!name=Meitu VIP
-#!desc=Fake VIP Meitu XiuXiu - chi MITM 2 host kiem tra goi, host pinning di thang
-
-[MITM]
-hostname = api.account.meitu.com, vesdk.meitu.com
-
-[Script]
-meitu-vip-user = type=http-response,pattern=^https:\/\/api\.account\.meitu\.com\/users\/show_current,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/cuongta-dhcntt/shadowrocket-modules/772f83a/meitu_vip_user.js
-meitu-vip-limit = type=http-response,pattern=^https:\/\/vesdk\.meitu\.com\/subscribe\/func_limit_batch_query,requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/cuongta-dhcntt/shadowrocket-modules/772f83a/meitu_vip_limit.js
